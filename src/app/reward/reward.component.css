@@ -1,0 +1,25 @@
+/* reward.component.css */
+.reward-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.reward-gif {
+    width: 300px; /* ou la taille qui convient à ton design */
+    height: auto; /* garde le ratio de l'image */
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}

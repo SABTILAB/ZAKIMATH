@@ -1,0 +1,16 @@
+<div class="game-container">
+    <header>
+        <h1>ZAKIMATH - Apprends en Jouant!</h1>
+        <p>Essaie de résoudre l'opération suivante:</p>
+    </header>
+    <div class="question-container" [ngClass]="{'animate__animated': isAnswered, 'animate__bounce': isCorrect, 'animate__shakeX': !isCorrect}">
+        <h2>Combien font {{ currentQuestion.num1 }} {{ currentQuestion.operator }} {{ currentQuestion.num2 }} ?</h2>
+        <input type="number" [(ngModel)]="userAnswer" class="answer-input">
+        <button (click)="submitAnswer()" class="submit-button">Vérifier</button>
+        <div *ngIf="feedbackMessage" class="feedback-message">{{ feedbackMessage }}</div>
+        <button *ngIf="isAnswered" (click)="nextQuestion()" class="next-button">Suivant</button>
+    </div>
+    <footer>
+        <p>Tu es presque là, continue comme ça pour gagner un trophée !</p>
+    </footer>
+</div>
